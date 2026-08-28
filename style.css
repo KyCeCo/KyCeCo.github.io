@@ -129,11 +129,6 @@ body.night-mode {
     color: #f1f1f1;
 }
 
-body.night-mode header {
-    background: #181818;
-    color: #f1f1f1;
-}
-
 body.night-mode nav {
     background: #000;
 }
