@@ -1,13 +1,14 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background:#f4f6f9;
-    color:#333;
+body {
+    background: #f4f6f9;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
 }
 
 #modeButton {
@@ -18,104 +19,109 @@ body{
     font-size: 16px;
 }
 
-header{
-    background:#0d6efd;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+header {
+    background: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    transition: 0.3s;
 }
 
-header h1{
-    font-size:40px;
-    margin-bottom:10px;
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-header p{
-    font-size:18px;
+header p {
+    font-size: 18px;
 }
 
-nav{
-    background:#222;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
+nav {
+    background: #222;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: 0.3s;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    padding:18px 20px;
-    transition:.3s;
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 18px 20px;
+    transition: 0.3s;
 }
 
-nav a:hover{
-    background:#0d6efd;
+nav a:hover {
+    background: #0d6efd;
 }
 
-section{
-    width:90%;
-    max-width:1100px;
-    margin:40px auto;
+section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
 }
 
-.card{
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+.card {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    transition: 0.3s;
 }
 
-h2{
-    color:#0d6efd;
-    margin-bottom:20px;
+h2 {
+    color: #0d6efd;
+    margin-bottom: 20px;
 }
 
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:20px;
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
-.project-card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
+.project-card {
+    background: white;
+    color: #333;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    transition: 0.3s;
 }
 
-.project-card:hover{
-    transform:translateY(-8px);
+.project-card:hover {
+    transform: translateY(-8px);
 }
 
-.project-card h3{
-    margin-bottom:15px;
+.project-card h3 {
+    margin-bottom: 15px;
 }
 
-.project-card p{
-    margin-bottom:20px;
+.project-card p {
+    margin-bottom: 20px;
 }
 
-button{
-    background:#0d6efd;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:6px;
-    cursor:pointer;
+button {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-button:hover{
-    background:#084298;
+button:hover {
+    background: #084298;
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    background:#222;
-    color:white;
-    margin-top:50px;
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #222;
+    color: white;
+    margin-top: 50px;
 }
 
 body.night-mode {
@@ -124,7 +130,8 @@ body.night-mode {
 }
 
 body.night-mode header {
-    background: #1a1a1a;
+    background: #181818;
+    color: #f1f1f1;
 }
 
 body.night-mode nav {
@@ -135,12 +142,33 @@ body.night-mode nav a {
     color: #f1f1f1;
 }
 
-body.night-mode button {
+body.night-mode nav a:hover {
+    background: #333;
+}
+
+body.night-mode .card,
+body.night-mode .project-card {
+    background: #1e1e1e;
+    color: #f1f1f1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
+body.night-mode h2 {
+    color: #4dabf7;
+}
+
+body.night-mode .project-card h3 {
+    color: #f1f1f1;
+}
+
+body.night-mode button,
+body.night-mode #modeButton {
     background: #333;
     color: white;
 }
 
-body.night-mode button:hover {
+body.night-mode button:hover,
+body.night-mode #modeButton:hover {
     background: #555;
 }
 
@@ -149,15 +177,15 @@ body.night-mode footer {
     color: #f1f1f1;
 }
 
-@media(max-width:600px){
+@media (max-width: 600px) {
 
-header h1{
-    font-size:30px;
-}
+    header h1 {
+        font-size: 30px;
+    }
 
-nav a{
-    width:100%;
-    text-align:center;
-}
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
 
 }
